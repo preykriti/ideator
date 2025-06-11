@@ -1,0 +1,7 @@
+<h1 class = "text-3xl mb-5 font-bold">Revise Idea </h1>
+
+<%= simple_form_for @idea, method: :patch do |f| %>
+    <%= f.input :description, input_html: {rows: 5, class: 'text-gray-800'}%>
+    <%= f.input :author, input_html: {class: 'text-gray-800'} %>
+    <%= f.submit "Submit"%>
+<% end %>

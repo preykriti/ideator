@@ -9,6 +9,11 @@ class IdeasController < ApplicationController
     def create 
         # @idea = Idea.create(description: params[:idea][:description], author: params[:idea][:author])
         @idea = Idea.create(idea_params)
+        if @idea.valid?
+
+        else
+
+        end
         redirect_to root_path
     end
 
@@ -17,12 +22,20 @@ class IdeasController < ApplicationController
     end
 
     def update
+         
         @idea = Idea.find(params[:id])
+        # validation will cause below to return false if validation fails
         if @idea.update(idea_params)
             redirect_to root_path
         else
             redirect_to edit_idea_path(params[:id])
         end
+    end
+
+    def destroy
+        @idea = Idea.find(params[:id])
+        @idea.destroy
+        redirect_to root_path
     end
         
 

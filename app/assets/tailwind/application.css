@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Pacifico&display=swap');
+@import "tailwindcss";
+@theme {
+    --font-roboto: "Roboto", sans-serif; 
+    --font-pacifico: "Pacifico", cursive;
+    --font-dosis: "Dosis", sans-serif;
+
+    --color-primary: #337ab7;
+  }

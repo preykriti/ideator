@@ -23,9 +23,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="flex flex-col min-h-screen">
     <%= render 'shared/nav' %>
-    <div class="max-w-screen-xl md:p-4 mx-auto flex-grow">
+
+    
+    <div class="max-w-screen-xl md:p-4 mx-auto flex-grow w-full">
+    <%= render 'shared/flash_messages' %>
     <%= yield %>
     </div>
     
